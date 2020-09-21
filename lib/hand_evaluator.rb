@@ -3,13 +3,13 @@ require_relative 'hand_factory'
 class HandEvaluator
   attr_reader :left, :right
 
-  def initialize(left:, right:)
+  def initialize(left, right)
     @left = HandFactory.build(cards: left)
     @right = HandFactory.build(cards: right)
   end
 
   def self.return_stronger_hand(left, right)
-    new(left: left, right: right).return_stronger_hand
+    new(left, right).return_stronger_hand
   end
 
   def return_stronger_hand
