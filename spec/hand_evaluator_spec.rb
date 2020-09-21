@@ -77,9 +77,9 @@ describe HandEvaluator do
   def expect_higher(higher_string, lower_string)
     higher = higher_string.split(" ")
     lower = lower_string.split(" ")
-    expect(HandEvaluator.new.return_stronger_hand(higher, lower)).
+    expect(HandEvaluator.return_stronger_hand(higher, lower)).
       to eq(higher)
-    expect(HandEvaluator.new.return_stronger_hand(lower, higher)).
+    expect(HandEvaluator.return_stronger_hand(lower, higher)).
       to eq(higher)
   end
 end
